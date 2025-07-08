@@ -1,0 +1,28 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Cor de fundo suave */
+    overflow-x: hidden; /* Evita rolagem horizontal ao esconder o menu */
+}
+
+/* Estilos para o submenu: quando o grupo pai é hover, o submenu direto é exibido */
+.group:hover > .submenu {
+    display: block;
+}
+
+/* Oculta o submenu por padrão, será controlado por JS para cliques ou por hover */
+.submenu {
+    display: none;
+}
+
+/* Estilo para o botão de fechar (X) */
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4a5568; /* Cor cinza */
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Ajabu,Rhodesian Ridgeback,Rhodesian,Ridgeback,cani di razza,dog,pedigree,cane Farashuu,cuccioli,cucciolate,training,Elisabetta Grande, Betta, Grande, kira"
+    />
+    <meta name="description" content="Ajabu Rhodesian Ridgeback" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/our-rr-style.css">
+
+    <title>Kizabi Ajabu Rhodesian Ridgeback</title>
+
+
+
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <!-- Cabeçalho da Página -->
+    <header class="bg-white shadow-md">
+      <!-- Usando flexbox para centralizar o logo e posicionar o botão do menu -->
+      <!-- Aumentado o padding vertical (py-8 md:py-12) para dar mais espaço no cabeçalho -->
+      <div
+        class="container mx-auto flex justify-center items-center relative py-8 md:py-12 px-4 md:px-6"
+      >
+        <!-- Logo - Centralizado no cabeçalho -->
+        <div>
+          <!-- Imagem do logo "Kizazi Ajabu Rhodesian Ridgebacks" -->
+          <!-- Adicionado o atributo alt para acessibilidade -->
+          <a href="#" aria-label="Torna alla pagina principale">
+            <img
+              src="assets/img/logo.PNG"
+              alt="Logo Kizazi Ajabu Rhodesian Ridgebacks"
+              class="h-32 md:h-40 w-auto"
+            />
+          </a>
+        </div>
+
+        <!-- Botão do Menu Sanduíche (sempre visível, posicionado absolutamente à direita) -->
+        <div
+          class="absolute right-4 md:right-6 top-1/2 transform -translate-y-1/2"
+        >
+          <button id="menu-button" class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu de Navegação (Menu Sanduíche deslizante da direita) -->
+        <nav
+          id="main-nav"
+          class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-4"
+        >
+          <!-- Botão para fechar o menu deslizante -->
+          <button id="close-menu-button" class="close-button">&times;</button>
+          <ul class="flex flex-col space-y-4 pt-10">
+            <!-- Lista principal de itens do menu -->
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >NEWS</a
+              >
+            </li>
+
+            <!-- Item de Menu: Our RR (com submenu) -->
+            <li class="relative group">
+              <a
+                href="our-rr.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block flex justify-between items-center"
+                onclick="toggleSubmenu(event)"
+              >
+                Our RR
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:rotate-180 transition-transform duration-300 ease-in-out"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <!-- Submenu para 'Our RR' -->
+              <ul
+                class="submenu bg-gray-50 rounded-md mt-2 py-2 w-full z-10 hidden"
+              >
+                <li>
+                  <a
+                    href="our-rr.html#maschio"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Maschio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="our-rr.html#femina"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Femina</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Item de Menu: Puppies (com submenu) -->
+            <li class="relative group">
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block flex justify-between items-center"
+                onclick="toggleSubmenu(event)"
+              >
+                Puppies
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:rotate-180 transition-transform duration-300 ease-in-out"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <!-- Submenu para 'Puppies' -->
+              <ul
+                class="submenu bg-gray-50 rounded-md mt-2 py-2 w-full z-10 hidden"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Actual</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Litter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Past Litter</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >STUD</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >HALL OF FAME</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >PHOTOS</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para quando o menu estiver aberto (fundo escurecido) -->
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+        ></div>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="container mx-auto p-4 md:p-8 flex-grow">
+      <!-- Seção de Foto Principal -->
+      <section
+        class="bg-gray-200 rounded-lg shadow-lg p-6 mb-8 flex justify-center items-center"
+      >
+        <img
+          src="assets/img/prima_pagina.jpg"
+          class="w-auto h-auto object-contain rounded-md"
+        />
+      </section>
+
+      <!-- Seção de História -->
+      <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Mia Storia</h2>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                La mia è la storia di una passione nata per caso 20 anni fa quando, dopo la perdita del mio amato dalmata, EGO Orpheuz, vengo letteralmente trascinata da tre mie carissime amiche a vedere una cucciolata di un “particolare” cane africano… Premetto che dell’Africa sono sempre stata perdutamente innamorata, grazie alle lunghe vacanze trascorse in giovane età, a casa dei miei zii materni che per più di 17 anni hanno vissuto in Nigeria (Kano, Kaduna e Lagos) prima e poi in Zambia (Lusaka). Pertanto tutto potevo immaginare, fuorché trovarmi di fronte a quella inaspettata cucciolata con uno singolare contropelo sul dorso.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                Un cucciolo soprattutto mi colpisce: un maschio con l’espressione sfrontata, inizialmente diffidente, ma che non ci mette molto a conquistarmi. Erano i primi di Maggio del 2001, cominciava la mia grande avventura con “Ajabu”, che mi ha portato in giro per l’Italia e poi in Europa, regalandomi grandi soddisfazioni non solo a livello espositivo. Da Ajabu in poi, tante esperienze tra campionati e nuovi amici, nell’arco di ben 14 anni, durante i quali ho studiato, ascoltato, rubatoi con gli occhi e con le orecchie, seguendo gli insegnamenti della signora Giovanna Bacchini Carr, che con l’affisso “delle Cime bianche” storicamente è stata tra le prime estimatrici e allevatrice della razza, in Italia.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                E’ cosi che con mia grande gioia arriva Farashuu delle cime bianche, e dopo di lei sua figlia Mbeke delle cime bianche e le sue nipoti Yoyoma delle cime bianche e Yaima delle cime bianche. Nel 2015 comincio ad allevare in prima persona ma soltanto nel 2019 mi sento pronta ad affrontare sfide e responsabilità con il mio affisso, Kizazi Ajabu RR, nome che ha un significato particolare in quanto AJABU in swahili significa “meraviglioso” e KIZAZI “discendenti o progenie” da cui una doppia interpretazione: I DISCENDENTI di Ajabu o la PROGENIE meravigliosa.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                Inizialmente non è stata una passeggiata; prima un solo soggetto, poi la coppia, le cucciolate, due stalloni importati e i miei crestati sono diventati 6, perciò, qualche anno, cambio vita e evado dal centro città! In campagna la vita cinofila è decisamente cambiata. Più spazio, ottimizzazione nella gestione delle cucciolate, progetti e investimenti ma soprattutto libertà in tutti i sensi.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                E a questo punto entra nella mia storia una famiglia di allevatori Daryl, Linda e Emma Friedland (Elangeni Rhodesian Ridgebacks Australia's History Making Kennel) che seppur dall’altra parte del mondo, oggi sono i miei migliori supporters e in particolare Linda, un’impagabile amica. Non finirò mai di ringraziarli per avermi accordato la loro fiducia, affidandomi due meraviglie: ELANGENI the places youll go aka Romae e ELANGENI world on fire aka Romeo.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                A tutt’oggi, divido il mio tempo tra la radio (l’altra mia passione nonche professione) e l’allevamento riproponendomi di essere un’ allevatrice responsabile: produco una/due cucciolate all’anno, prestando grande cura e attenzione alla selezione caratteriale dei soggetti nonché alle linee di sangue al fine di preservarne salute, caratteristiche e attitudini naturali. La genetica è una vera sfida con la natura. Spesso si parla di percentuali o di “possibilità” anche se per alcuni casi specifici, come per i caratteri mendeliani semplici, è possibile fare delle affermazioni esatte, senza possibilità di errore. Un passo falso può sempre rimettere tutto in discussione, ma pensare positivo aiuta!
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                Quando mi chiedono che tipo di cane sia il Rhodesian Ridgeback rispondo: ”mettete insieme un cane, un cavallo e un grosso felino!” E’ un’immagine che fotografa assai realisticamente questa razza potente ma non eccessiva, devota ma non remissiva, energica ma al tempo stesso indolente, versatile, sensibile, leale, umana; tutte doti invidiabili, degne di essere salvaguardate e rispettate e che possono essere apprezzate soltanto vivendo al fianco di un RR.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify mb-4">
+                Un Ridgeback è fiero, sfrontato, intelligente, fisico ma anche irriducibilmente coccolone e ammetto che in condizioni di vita rurale, la sua gestione è molto semplice, mentre in condizioni di vita urbane, è un cane decisamente molto esigente. Importantissima è la socializzazione del cucciolo e comunque basilare la guida del suo “leader”, perché un RR può rivelarsi una gioia per sempre ma anche un terribile sbaglio!
+            </p>
+            <p class="text-gray-600 leading-relaxed text-justify">
+                Dovessi rispondere oggi alla domanda: quale razza vorresti allevare? All’evidenza della mia esperienza rispondo senza ombra di dubbio sempre e ancora RR… solo il canile aprirebbe altre porte del mio cuore! Amo incondizionatamente i miei “crestati”, quelli di ieri, quelli di oggi e quelli che verranno. Ognuno con la propria fantastica storia…
+            </p>
+      </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="bg-gray-800 text-white p-6 mt-8 rounded-t-lg">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <!-- Informações de Contato no Rodapé -->
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-xl font-semibold mb-2">Contatti</h3>
+          <p class="text-gray-400">Elisabetta Grande</p>
+          <p class="text-gray-400">Via Bivio delle Starne, 6/H - Capena (RM)</p>
+          <p class="text-gray-400">+39 337 741 469</p>
+          <p class="text-gray-400">betta@rhodesianridgebackajabu.eu</p>
+        </div>
+
+        <!-- Logo e Direitos Autorais no Rodapé -->
+        <div>
+          <img
+            src="assets/img/logo.PNG"
+            alt="Logo Kizazi Ajabu Rhodesian Ridgebacks"
+            class="h-16 w-auto mx-auto md:mx-0 rounded-lg"
+          />
+          <p class="text-gray-400">
+            © 2025 Kizazi Ajabu RR. Tutti i diritti riservati.
+          </p>
+          
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/homepage.js"></script>
+  </body>
+</html>

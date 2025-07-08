@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Ajabu,Rhodesian Ridgeback,Rhodesian,Ridgeback,cani di razza,dog,pedigree,cane Farashuu,cuccioli,cucciolate,training,Elisabetta Grande, Betta, Grande, kira"
+    />
+    <meta name="description" content="Ajabu Rhodesian Ridgeback" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/our-rr-style.css">
+
+    <title>OUR RR | Kizabi Ajabu Rhodesian Ridgeback</title>
+
+
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <!-- Cabeçalho da Página -->
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto flex justify-center items-center relative py-8 md:py-12 px-4 md:px-6"
+      >
+        <!-- Logo - Centralizado no cabeçalho -->
+        <div>
+          <a href="index.html" aria-label="Torna alla pagina principale">
+            <img
+              src="assets/img/logo.PNG"
+              alt="Logo Kizazi Ajabu Rhodesian Ridgebacks, con mappa stilizzata dell'Africa e testo 'Kizazi Ajabu Rhodesian Ridgebacks'"
+              class="h-32 md:h-40 w-auto rounded-lg"
+              onerror="this.onerror=null;this.src='https://placehold.co/150x60/a0aec0/ffffff?text=LOGO';"
+            />
+          </a>
+        </div>
+
+        <!-- Botão do Menu Sanduíche (sempre visível, posicionado absolutamente à direita) -->
+        <div
+          class="absolute right-4 md:right-6 top-1/2 transform -translate-y-1/2"
+        >
+          <button id="menu-button" class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu de Navegação (Menu Sanduíche deslizante da direita) -->
+        <nav
+          id="main-nav"
+          class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-4"
+        >
+          <!-- Botão para fechar o menu deslizante -->
+          <button id="close-menu-button" class="close-button">&times;</button>
+          <ul class="flex flex-col space-y-4 pt-10">
+            <!-- Lista principal de itens do menu -->
+            <li>
+              <a
+                href="index.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >NEWS</a
+              >
+            </li>
+
+            <!-- Item de Menu: Our RR (com submenu) -->
+            <li class="relative group">
+              <a
+                href="our-rr.html"
+                class="text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block flex justify-between items-center"
+                onclick="toggleSubmenu(event)"
+              >
+                Our RR
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:rotate-180 transition-transform duration-300 ease-in-out"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <!-- Submenu para 'Our RR' -->
+              <ul
+                class="submenu bg-gray-50 rounded-md mt-2 py-2 w-full z-10 hidden"
+              >
+                <li>
+                  <a
+                    href="#maschio"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Maschio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#femina"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Femina</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Item de Menu: Puppies (com submenu) -->
+            <li class="relative group">
+              <a
+                href="puppies.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block flex justify-between items-center"
+                onclick="toggleSubmenu(event)"
+              >
+                Puppies
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:rotate-180 transition-transform duration-300 ease-in-out"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <!-- Submenu para 'Puppies' -->
+              <ul
+                class="submenu bg-gray-50 rounded-md mt-2 py-2 w-full z-10 hidden"
+              >
+                <li>
+                  <a
+                    href="#actual"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Actual</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#litter"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Litter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#past-litter"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                    >Past Litter</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="stud.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >STUD</a
+              >
+            </li>
+            <li>
+              <a
+                href="hall-of-fame.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >HALL OF FAME</a
+              >
+            </li>
+            <li>
+              <a
+                href="photos.html"
+                class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out block"
+                >PHOTOS</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para quando o menu estiver aberto (fundo escurecido) -->
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+        ></div>
+      </div>
+    </header>
+
+
+    <!-- Conteúdo Principal da Página Our RR -->
+    <main class="container mx-auto p-4 md:p-8 flex-grow">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center">Our RR</h1>
+
+        <!-- Seção Maschio -->
+        <section id="maschio" class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Maschio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cão Macho: Romeo -->
+                <div class="dog-card">
+                    <img src="assets/img/romeo.jpg" alt="Cane Rhodesian Ridgeback maschio Romeo, con espressione fiera e manto dorato" onclick="openLightbox('assets/img/romeo.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Romeo</h3>
+                    <p class="text-gray-600">ELANGENI World On Fire</p>
+                </div>
+                <!-- Cão Macho: Romae -->
+                <div class="dog-card">
+                    <img src="assets/img/romae.jpg" alt="Cane Rhodesian Ridgeback maschio Romae, in posa elegante con colonne sullo sfondo" onclick="openLightbox('assets/img/romae.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Romae</h3>
+                    <p class="text-gray-600">ELANGENI The Places You'll Go</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Femina -->
+        <section id="femina" class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Femina</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cão Fêmea: Aza -->
+                <div class="dog-card">
+                    <img src="assets/img/aza.jpg" alt="Cane Rhodesian Ridgeback femmina Aza, in piedi con manto marrone e espressione attenta" onclick="openLightbox('assets/img/aza.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Aza</h3>
+                    <p class="text-gray-600">Informazioni su Aza...</p>
+                </div>
+                <!-- Cão Fêmea: Beke -->
+                <div class="dog-card">
+                    <img src="assets/img/beke.jpg" alt="Cane Rhodesian Ridgeback femmina Beke, in posa da esposizione con manto lucido" onclick="openLightbox('assets/img/beke.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Beke</h3>
+                    <p class="text-gray-600">Informazioni su Beke...</p>
+                </div>
+                <!-- Cão Fêmea: Duma -->
+                <div class="dog-card">
+                    <img src="assets/img/duma.jpg" alt="Cane Rhodesian Ridgeback femmina Duma, in piedi su erba con manto marrone chiaro" onclick="openLightbox('assets/img/duma.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Duma</h3>
+                    <p class="text-gray-600">Informazioni su Duma...</p>
+                </div>
+                <!-- Cão Fêmea: Edet -->
+                <div class="dog-card">
+                    <img src="assets/img/edet.jpg" alt="Cane Rhodesian Ridgeback femmina Edet, in piedi su erba con la lingua leggeramente fuori" onclick="openLightbox('assets/img/edet.jpg', this.alt)">
+                    <h3 class="text-xl font-semibold text-gray-800">Edet</h3>
+                    <p class="text-gray-600">Informazioni su Edet...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="bg-gray-800 text-white p-6 mt-8 rounded-t-lg">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <!-- Informações de Contato no Rodapé -->
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-xl font-semibold mb-2">Contatti</h3>
+          <p class="text-gray-400">Elisabetta Grande</p>
+          <p class="text-gray-400">Via Bivio delle Starne, 6/H - Capena (RM)</p>
+          <p class="text-gray-400">+39 337 741 469</p>
+          <p class="text-gray-400">betta@rhodesianridgebackajabu.eu</p>
+        </div>
+
+        <!-- Logo e Direitos Autorais no Rodapé -->
+        <div>
+          <img
+            src="assets/img/logo.PNG"
+            alt="Logo Kizazi Ajabu Rhodesian Ridgebacks, con mappa stilizzata dell'Africa e testo 'Kizazi Ajabu Rhodesian Ridgebacks'"
+            class="h-16 w-auto mx-auto md:mx-0 rounded-lg"
+            onerror="this.onerror=null;this.src='https://placehold.co/100x40/a0aec0/ffffff?text=LOGO';"
+          />
+          <p class="text-gray-400">
+            © 2025 Kizazi Ajabu RR. Tutti i diritti riservati.
+          </p>
+          <p class="text-400">Capena (RM)</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Estrutura do Lightbox -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="Imagem ampliada do Rhodesian Ridgeback">
+        </div>
+    </div>
+
+
+    <script src="assets/js/our-rr-script.js"></script>
+  </body>
+</html>

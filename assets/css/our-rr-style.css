@@ -1,0 +1,94 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Cor de fundo suave */
+    overflow-x: hidden; /* Evita rolagem horizontal ao esconder o menu */
+}
+
+/* Estilos para o submenu: quando o grupo pai é hover, o submenu direto é exibido */
+.group:hover > .submenu {
+    display: block;
+}
+
+/* Oculta o submenu por padrão, será controlado por JS para cliques ou por hover */
+.submenu {
+    display: none;
+}
+
+/* Estilo para o botão de fechar (X) */
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4a5568; /* Cor cinza */
+}
+
+/* Estilos para os cards de cães */
+.dog-card {
+    background-color: #f7fafc; /* bg-gray-100 */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para o card */
+}
+
+.dog-card img {
+    width: 100%;
+    height: 250px; /* Altura fixa para as imagens nos cards */
+    object-fit: contain; /* Faz a imagem preencher o espaço, cortando se necessário */
+    border-radius: 0.375rem; /* rounded-md */
+    margin-bottom: 0.75rem; /* mb-3 */
+    cursor: zoom-in; /* Indica que a imagem é clicável para ampliar */
+}
+
+/* Estilos para o Lightbox */
+.lightbox-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    z-index: 1000; /* Acima de tudo */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: white; /* Fundo branco para a imagem */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh; /* Limita a altura da imagem no lightbox */
+    object-fit: contain;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    border-radius: 0.375rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    color: white; /* Cor do X */
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1; /* Alinha o X verticalmente */
+}
