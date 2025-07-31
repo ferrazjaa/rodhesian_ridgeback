@@ -1,7 +1,7 @@
 /* Estilos gerais do corpo */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6; /* Cor de fundo suave */
+    background-color: #f3f4f6;  /*Cor de fundo suave */
     overflow-x: hidden; /* Evita rolagem horizontal ao esconder o menu */
 }
 
